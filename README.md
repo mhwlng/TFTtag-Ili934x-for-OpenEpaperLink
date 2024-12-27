@@ -63,16 +63,14 @@ Adjust paths, ip address, user and password in .csproj file as required :
 ```
 <Target Name="PiCopy" AfterTargets="Publish">
   <Exec Command="&quot;C:\Program Files (x86)\WinSCP\WinSCP.com&quot; /command &quot;open sftp://pi:raspberry@192.168.2.60/&quot; &quot;synchronize remote C:\dotnet\projects\TFTtag-Ili934x-for-OpenEpaperLink\TFTtag-Ili934x-for-OpenEpaperLink\bin\Release\net9.0\publish /home/pi/TFTtag-Ili934x-for-OpenEpaperLink/&quot; &quot;exit&quot;" />
-</Target>```
-
+</Target>
+```
 Alternatively, you could also copy all the files using pscp, that comes with putty:
-
 ```
 Target Name="PiCopy" AfterTargets="Publish">
    <Exec Command="pscp -r -pw raspberry C:\dotnet\projects\TFTtag-Ili934x-for-OpenEpaperLink\TFTtag-Ili934x-for-OpenEpaperLink\bin\Release\net9.0\publish\ pi@192.168.2.60:/home/pi/TFTtag-Ili934x-for-OpenEpaperLink/" />
 </Target>
 ```
-
 First stop the application, before updating the files :
 ```
 sudo systemctl stop TFTtag-Ili934x-for-OpenEpaperLink

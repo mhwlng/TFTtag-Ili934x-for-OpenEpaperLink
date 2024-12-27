@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>TFTtag_Ili934x_for_OpenEpaperLink</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<Target Name="PiCopy" AfterTargets="Publish">
+		<Exec Command="&quot;C:\Program Files (x86)\WinSCP\WinSCP.com&quot; /command &quot;open sftp://pi:raspberry@192.168.2.60/&quot; &quot;synchronize remote C:\dotnet\projects\TFTtag-Ili934x-for-OpenEpaperLink\TFTtag-Ili934x-for-OpenEpaperLink\bin\Release\net9.0\publish /home/pi/TFTtag-Ili934x-for-OpenEpaperLink/&quot; &quot;exit&quot;" />
+	</Target>
+	<ItemGroup>
+		<PackageReference Include="Iot.Device.Bindings" Version="3.2.0" />
+		<PackageReference Include="Iot.Device.Bindings.SkiaSharpAdapter" Version="3.2.0" />
+		<PackageReference Include="System.Device.Gpio" Version="3.2.0" />
+	</ItemGroup>
+</Project>

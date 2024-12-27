@@ -1,0 +1,34 @@
+{
+	"version": 1,
+	"name": "ILI9341 TFT 320x240",
+	"width": 320,
+	"height": 240,
+	"rotatebuffer": 0,
+	"bpp": 16,
+	"colortable": {
+		"white": [ 255, 255, 255 ],
+		"black": [ 0, 0, 0 ],
+		"red": [ 255, 0, 0 ]
+	},
+	"shortlut": 0,
+	"options": [ ],
+	"contentids": [1,  21 ],
+	"template": {
+		"21": [
+			{ "box": [ 0, 0, 320, 240, 1 ] },
+			{ "text": [ 10, 15, "OpenEpaperLink AP", "calibrib30", 2, 0, 0, 1 ] },
+			{ "text": [ 10, 70, "IP address:", "bahnschrift20", "#888888", 0, 0, 1 ] },
+			{ "text": [ 120, 70, "{ap_ip}", "bahnschrift20", 0, 0, 0, 1 ] },
+			{ "text": [ 10, 95, "Channel:", "bahnschrift20", "#888888", 0, 0, 1 ] },
+			{ "text": [ 120, 95, "{ap_ch}", "bahnschrift20", 0, 0, 0, "1" ] },
+			{ "text": [ 10, 120, "Tag count:", "bahnschrift20", "#888888", 0, 0, 1 ] },
+			{ "text": [ 120, 120, "{ap_tagcount}", "bahnschrift20", 0, 0, 0, "1" ] }
+		],
+	    "1": {
+			"weekday": [ 160, 0, "Signika-SB.ttf", 70 ],
+			"month": [ 160, 170, "Signika-SB.ttf", 60 ],
+			"day": [ 160, 55, "Signika-SB.ttf", 120 ]	
+		  
+		}		
+	}
+}

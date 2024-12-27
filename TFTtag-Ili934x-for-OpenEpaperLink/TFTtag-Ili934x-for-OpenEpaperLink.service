@@ -1,0 +1,17 @@
+﻿[Unit]
+Description=TFTtag Ili934x for OpenEpaperLink
+Wants=network-online.target
+After=network.target network-online.target
+    
+[Service]
+Type=notify
+WorkingDirectory=/home/pi/TFTtag-Ili934x-for-OpenEpaperLink/
+ExecStart=/home/pi/TFTtag-Ili934x-for-OpenEpaperLink/TFTtag-Ili934x-for-OpenEpaperLink
+SyslogIdentifier=TFTtagIli934xforOpenEpaperLink
+User=pi
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -13,6 +13,13 @@
 	<ItemGroup>
 		<PackageReference Include="Iot.Device.Bindings" Version="3.2.0" />
 		<PackageReference Include="Iot.Device.Bindings.SkiaSharpAdapter" Version="3.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="9.0.0" />
 		<PackageReference Include="System.Device.Gpio" Version="3.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="TFTtag-Ili934x-for-OpenEpaperLink.service">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 </Project>
